@@ -1,0 +1,34 @@
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Map\MapFile.txt
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe.config
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe.config
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Files\HazardInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Files\UpgradeInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Files\HealthInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Files\CoinInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Files\EnemyInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Files\MapFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\Files\HazardInfoFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\Files\UpgradeInfoFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\Files\HealthInfoFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\Files\CoinInfoFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\Files\EnemyInfoFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\Files\MapFile.txt
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe.config
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.exe
+C:\GITunityPROJ\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.pdb

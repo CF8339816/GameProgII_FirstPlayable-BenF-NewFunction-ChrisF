@@ -1,0 +1,242 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GameProgII_FirstPlayable_BenF
+{
+    internal class Enemy : ICharacter
+    {
+        public (int, int) _pos;
+
+        public (int, int) _prevPOS;
+
+        public int _health;
+        public bool _isAlive = true;
+
+        public char _model;
+        public Player _target;
+        public Map _map;
+
+        public int _attack;
+
+
+        public Enemy((int, int) pos, int health, char model, Player target, Map map)
+        {
+            _pos = pos;
+            _health = health;
+            _model = model;
+            _target = target;
+            _map = map;
+
+            _attack = 1;
+        }
+
+        
+
+        public void Draw()
+        { 
+            if (_pos.Item1 < Console.WindowWidth)
+            {
+                if (_pos.Item2 < Console.WindowHeight)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.SetCursorPosition(_prevPOS.Item1, _prevPOS.Item2);
+                    Console.Write(_map.refMap[_prevPOS.Item1, _prevPOS.Item2]);
+
+                    Console.SetCursorPosition(_pos.Item1, _pos.Item2);
+
+                    Console.Write(_model);
+
+                    Console.SetCursorPosition(_pos.Item1, _pos.Item2);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            }
+        }
+
+        virtual public void Update()
+        {
+            _prevPOS = _pos;
+
+            if (Absolute(_target._posX - _pos.Item1) > Absolute(_target._posY - _pos.Item2))
+            {
+                //aligns enemy x with player x
+                if (_pos.Item1 > _target._posX)
+                {
+                    _pos.Item1--;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
+                }
+
+                else if (_pos.Item1 < _target._posX)
+                {
+                    _pos.Item1++;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
+                }
+                else
+                {
+                    //do nothing
+                }
+            }
+            
+            else
+            {
+                //aligns enemy y with player y
+                if (_pos.Item2 > _target._posY)
+                {
+                    _pos.Item2--;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
+                }
+
+                else if (_pos.Item2 < _target._posY)
+                {
+                    _pos.Item2++;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
+                }
+                else
+                {
+                    //do nothing
+                }
+            }
+
+            #region Debug Lines
+            //Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}"); ///(relative to the target pos)
+            //Debug.WriteLine($"{_model} Pos: {_pos}"); ///(pos)
+            #endregion
+        }
+
+        public int Absolute(int value)
+        {
+            if(value < 0)
+            {
+                value -= value * 2;
+                return value;
+            }
+
+            else
+            {
+                return value;
+            }
+    
+        }
+
+        public void TakeDamage(int amount)
+        {
+            _health -= amount;
+
+            if (Absolute(_target._prevPOS.Item1 - _pos.Item1) > Absolute(_target._prevPOS.Item2 - _pos.Item2))
+            {
+                //gets knocked back
+                if (_pos.Item1 > _target._prevPOS.Item1)
+                {
+                    _pos.Item1 += 2;
+                }
+
+                else if (_pos.Item1 < _target._prevPOS.Item1)
+                {
+                    _pos.Item1 -= 2;
+                }
+                else
+                {
+                    //do nothing
+                }
+            }
+
+            else
+            {
+                
+                if (_pos.Item2 > _target._prevPOS.Item2)
+                {
+                    _pos.Item2 += 2;
+                }
+
+                else if (_pos.Item2 < _target._prevPOS.Item2)
+                {
+                    _pos.Item2 -= 2;
+                }
+                else
+                {
+                    //do nothing
+                }
+            }
+
+            if (_health < 0)
+            {
+                _health = 0;
+                Destroy();
+                _pos = (0, 0);
+                _prevPOS = (0, 0);
+            }
+        }
+
+        public void Destroy()
+        {
+            _isAlive = false;
+            _pos = (0,0);
+        }
+
+        public bool CheckAlive()
+        {
+            if (_isAlive)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+        public (int, int) CheckPOS(bool prev)
+        {
+            if (prev)
+            {
+                return _prevPOS;
+            }
+
+            else
+            {
+                return _pos;
+            }
+        }
+
+        public void SetPOS((int,int) pos)
+        {
+            _pos = pos;
+        }
+
+        public int CheckAttack()
+        {
+            return _attack;
+        }
+
+        public int CheckHealth()
+        {
+            return _health;
+        }
+
+        public char CheckModel()
+        {
+            return _model;
+        }
+    }
+}
