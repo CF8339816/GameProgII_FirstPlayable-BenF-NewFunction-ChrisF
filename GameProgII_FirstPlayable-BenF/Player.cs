@@ -18,7 +18,7 @@ namespace GameProgII_FirstPlayable_BenF
         public bool _isAlive = true;
 
         public Map _map;
-        public FieldOfVisionCam fieldOfVisionCam;// initalize fieldof vision cam  for masking map.- CF
+       // public FieldOfVisionCam fieldOfVisionCam;// initalize fieldof vision cam  for masking map.- CF
         public int _coins;
         public int _attack = 1;
         
@@ -170,7 +170,7 @@ namespace GameProgII_FirstPlayable_BenF
                 //Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
 
             }
-            fieldOfVisionCam.FOVcamMask();// adding the field of vision to the map display - CF
+           // fieldOfVisionCam.FOVcamMask();// adding the field of vision to the map display - CF
         }
 
         public void TakeDamage(int amount)
