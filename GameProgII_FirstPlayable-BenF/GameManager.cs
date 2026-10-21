@@ -9,10 +9,24 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+#region coder & project
+/// <summary>
+/// Original code Ben Franken NSCC Game programming Student
+/// 
+/// NSCC GAME2025 / 4086 / Game Programming III(B)/ Doucette,Matthew
+/// Legacy Project - Camera, Shops, or Quests. Add New Function.
+/// Coder current script addotions annotated in comments: Chris French Second Year NSCC Game Programming 
+
+/// </summary>
+#endregion
+
 namespace GameProgII_FirstPlayable_BenF
-{
+{ 
+    
+
     internal class GameManager
     {
+        
         #region Variables
         static int enemiesDead;
         static bool hasWon;
@@ -25,7 +39,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         //create entities
         static Map map = new Map();
-      //  static FieldOfVisionCam fieldOfVisionCam;
+        
         static public Player player = new Player(6, 5, map, 10);/// made public so  fieldoof vision cam could access player location - CF
 
         //list of enemies
@@ -82,6 +96,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         private void CheckHits()
         {
+            
             /*
              * Checks Entity Collision
              */
@@ -178,6 +193,8 @@ namespace GameProgII_FirstPlayable_BenF
 
         private void CheckArea()
         {
+            
+
             if (player._posY < 13)
             {
                 if (player._posX > 26)
@@ -230,7 +247,7 @@ namespace GameProgII_FirstPlayable_BenF
             {
                 Console.Clear();
                 map.DisplayMap();
-             //   fieldOfVisionCam.FOVcamMask(); // adding the field of vision to the map display - CF
+      
             }
 
             prevWindowHeight = curWindowHeight;
@@ -473,7 +490,6 @@ namespace GameProgII_FirstPlayable_BenF
             Console.Clear();
 
             map.DisplayMap();
-         //  fieldOfVisionCam.FOVcamMask();// adding the field of vision to the map display - CF
             //display HUD
             Console.WriteLine($"Player Health: {player._health}");
             Console.WriteLine($"Player Attack: {player._attack}");
@@ -487,8 +503,12 @@ namespace GameProgII_FirstPlayable_BenF
              */
 
 
+
             while (player._isAlive)
             {
+            
+                map.DisplayMapWithFOV(player._posX, player._posY); // adding the field of vision to the map display - CF
+
                 player._prevPOS = (player._posX, player._posY);
 
                 CheckArea();
@@ -529,7 +549,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                 //display player
                 player.Draw();
-
+               
                 CheckHits();
 
 
@@ -569,7 +589,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                     //display player
                     player.Draw();
-
+                   
                     CheckHits();
 
                     isPlayerTurn = false;
@@ -670,6 +690,7 @@ namespace GameProgII_FirstPlayable_BenF
 
             }
 
+            map.DisplayMapWithFOV(player._posX, player._posY);
         }
 
         public bool GameEnd()

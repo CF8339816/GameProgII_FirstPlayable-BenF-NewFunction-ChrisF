@@ -7,76 +7,70 @@ using static GameProgII_FirstPlayable_BenF.Player;
 using static GameProgII_FirstPlayable_BenF.GameManager;
 using static GameProgII_FirstPlayable_BenF.Map;
 
-#region coder & project
-/// <summary>
-/// NSCC GAME2025 / 4086 / Game Programming III(B)/ Doucette,Matthew
-/// Legacy Project - Camera, Shops, or Quests. Add New Function.
-/// Coder current script: Chris French Second Year NSCC Game Programming 
-/// Additions / annotations:
-/// 
-/// </summary>
-#endregion
+
 
 namespace GameProgII_FirstPlayable_BenF
 {
+    /// moved  function to Map.cs as the game manager was erroring when calling from this  script then i further refined the code  
+}
 
-    internal class FieldOfVisionCam
-    {
-        public Map map;
-        public int VisionRadius = 6;
-        public int mapRows = Map.rows;
-        public int mapCols = Map.cols;
+//     class FieldOfVisionCam
+//    {
+//        public Map map;
+//        public int VisionRadius = 6;
+//        public int mapRows = Map.rows;
+//        public int mapCols = Map.cols;
 
-        public void FOVcamMask()
-        {
-            int playerX = GameManager.player._posX;
-            int playerY = GameManager.player._posY; 
+//        public void FOVcamMask()
+//        {
+//            int playerX = GameManager.player._posX;
+//            int playerY = GameManager.player._posY; 
         
-            Console.SetCursorPosition(0, 0);
+//            Console.SetCursorPosition(0, 0);
 
            
-            for (int i = 0; i < mapData.Length; i++)
-            {
+//            for (int i = 0; i < mapData.Length; i++)
+//            {
               
-                int tileX = i / mapCols;
-                int tileY = i % mapCols;
+//                int tileX = i / mapCols;
+//                int tileY = i % mapCols;
 
          
-                int distance = Math.Abs(tileX - playerX) + Math.Abs(tileY - playerY);
+//                int distance = Math.Abs(tileX - playerX) + Math.Abs(tileY - playerY);
 
-                if (distance <= VisionRadius)
-                {
+//                if (distance <= VisionRadius)
+//                {
                   
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-                else
-                {
+//                    Console.ForegroundColor = ConsoleColor.White;
+//                }
+//                else
+//                {
                    
-                    if (mapData[i] == '^' || mapData[i] == '`' || mapData[i] == '~' || mapData[i] == '*')
-                    {
-                        Console.ForegroundColor = ConsoleColor.Black;
-                    }
-                    else
-                    {
+//                    if (mapData[i] == '^' || mapData[i] == '`' || mapData[i] == '~' || mapData[i] == '*')
+//                    {
+//                        Console.ForegroundColor = ConsoleColor.Black;
+//                    }
+//                    else
+//                    {
                        
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
-                    }
-                }
+//                        Console.ForegroundColor = ConsoleColor.DarkGray;
+//                    }
+//                }
 
-                Console.Write(mapData[i]);
+//                Console.Write(mapData[i]);
 
                 
-                if (tileY == mapCols - 1)
-                {
-                    Console.WriteLine();
-                }
-            }
+//                if (tileY == mapCols - 1)
+//                {
+//                    Console.WriteLine();
+//                }
+//            }
 
         
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-    }
-}
+//            Console.ForegroundColor = ConsoleColor.White;
+//        }
+//    }
+//}
 
 
 

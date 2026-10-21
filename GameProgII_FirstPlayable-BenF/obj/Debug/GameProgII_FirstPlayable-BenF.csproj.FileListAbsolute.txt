@@ -33,3 +33,17 @@ C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayabl
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\CoinInfoFile.txt
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\EnemyInfoFile.txt
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\MapFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\HazardInfoFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\UpgradeInfoFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\HealthInfoFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\CoinInfoFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\EnemyInfoFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\MapFile.txt
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe.config
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.pdb
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe.config
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
+W:\gitProjs\y2t1\GameProgII_FirstPlayable-BenF-NewFunction-ChrisF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb

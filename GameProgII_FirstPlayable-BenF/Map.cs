@@ -6,6 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+#region coder & project
+/// <summary>
+/// Original code Ben Franken NSCC Game programming Student
+/// 
+/// NSCC GAME2025 / 4086 / Game Programming III(B)/ Doucette,Matthew
+/// Legacy Project - Camera, Shops, or Quests. Add New Function.
+/// Coder current script addotions annotated in comments: Chris French Second Year NSCC Game Programming 
+
+/// </summary>
+#endregion
+
+
 namespace GameProgII_FirstPlayable_BenF
 {
     internal class Map
@@ -13,7 +26,7 @@ namespace GameProgII_FirstPlayable_BenF
         static public string path = @"Files/MapFile.txt";
 
         static public string mapData = File.ReadAllText(path);
-       //public FieldOfVisionCam fieldOfVisionCam;// initalize fieldof vision cam  for masking map.- CF
+        //public FieldOfVisionCam fieldOfVisionCam;// initalize fieldof vision cam  for masking map.- CF
         //scale of map
         static public int rows = 89;
         static public int cols = 36;
@@ -24,7 +37,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         public Map()
         {
-            
+
         }
 
         public void MakeOccupiedMap()
@@ -34,7 +47,7 @@ namespace GameProgII_FirstPlayable_BenF
                 int lineNum = -1;
                 int charNum = -1;
 
-                foreach(string line in File.ReadLines(path))
+                foreach (string line in File.ReadLines(path))
                 {
                     charNum = -1;
                     lineNum++;
@@ -103,7 +116,7 @@ namespace GameProgII_FirstPlayable_BenF
                     }
                 }
             }
-           
+
         }
 
 
@@ -119,7 +132,7 @@ namespace GameProgII_FirstPlayable_BenF
                     charNum = -1;
                     lineNum++;
 
-                  
+
 
                     foreach (char character in line)
                     {
@@ -130,7 +143,7 @@ namespace GameProgII_FirstPlayable_BenF
                         if (character == '^')
                         {
                             refMap[charNum, lineNum] = character;
-                          
+
                         }
 
                         else if (character == '`')
@@ -183,7 +196,7 @@ namespace GameProgII_FirstPlayable_BenF
                     }
                 }
             }
-          
+
         }
 
 
@@ -204,7 +217,7 @@ namespace GameProgII_FirstPlayable_BenF
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                     }
-                    
+
                     if (mapData[i] == '~')
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
@@ -218,8 +231,64 @@ namespace GameProgII_FirstPlayable_BenF
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.WriteLine(" ");
-               // fieldOfVisionCam.FOVcamMask();// adding the field of vision to the map display - CF
+               
             }
+        }
+
+        public void DisplayMapWithFOV(int playerX, int playerY, int visionRadius = 2)// adding the field of vision to the map display - CF
+        {
+            if (Console.WindowHeight < cols || Console.WindowWidth < rows) return;// prevents render glitching -cf
+
+            Console.SetCursorPosition(0, 0);
+
+          // int radiusSquared = visionRadius * visionRadius;// calculate raidius squared for circular fov masking - CF
+            for (int y = 0; y < cols; y++)
+            {
+                for (int x = 0; x < rows; x++)
+                {
+                    char currentTile = refMap[x, y];
+
+                    int dx = (x - playerX)/ 2; //Adjusts foir the 2:1 aspect raioo of  font skew for the map tiles had
+                                               //a time woththe maths all the turtorials wewre saying times two but after
+                                               //trying different numbers and  positions found that divide by two worked.. -Cf
+                    int dy = y - playerY;
+                    int distanceSquared = (dx * dx) + (dy * dy);// calculates range to from player for fov - CF
+
+                    int correctedRadius = visionRadius * 2;
+                    int radiusSquared = correctedRadius * correctedRadius;
+
+                    //int distance = Math.Abs(x - playerX) + Math.Abs(y - playerY);// calculates range to from player for fov - CF
+
+                    if (distanceSquared <= radiusSquared)// applieds normal map settings inside fov  - CF
+                    {
+                        
+                        if (currentTile == '^') Console.ForegroundColor = ConsoleColor.DarkGray;
+                        else if (currentTile == '`') Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        else if (currentTile == '~') Console.ForegroundColor = ConsoleColor.Blue;
+                        else if (currentTile == '*') Console.ForegroundColor = ConsoleColor.Green;
+                        else Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else  // Masks map black outside of fov  - CF
+                    {
+                      
+                        if (currentTile == '^' || currentTile == '`' || currentTile == '~' || currentTile == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                        }
+                        else// leaves borders but greys them out  - CF
+                        {                            
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                        }
+                    }
+                    Console.Write(currentTile);
+                }              
+                Console.WriteLine();
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+     
+    }
+}
 
             #region old code
             //#region border top
@@ -310,9 +379,9 @@ namespace GameProgII_FirstPlayable_BenF
             //Console.WriteLine("` = grass");
             //Console.WriteLine("~ = water");
             //Console.WriteLine("* = trees");
-        }
-    }
-}
+//        }
+//    }
+//}
 
 //string path = @"Data\data101.txt";
 
