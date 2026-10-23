@@ -26,7 +26,7 @@ namespace GameProgII_FirstPlayable_BenF
         static public string path = @"Files/MapFile.txt";
 
         static public string mapData = File.ReadAllText(path);
-        //public FieldOfVisionCam fieldOfVisionCam;// initalize fieldof vision cam  for masking map.- CF
+ 
         //scale of map
         static public int rows = 89;
         static public int cols = 36;
@@ -271,7 +271,7 @@ namespace GameProgII_FirstPlayable_BenF
                     else  // Masks map black outside of fov  - CF
                     {
                       
-                        if (currentTile == '^' || currentTile == '`' || currentTile == '~' || currentTile == '*')
+                        if (currentTile == '^' || currentTile == '`' || currentTile == '~' || currentTile == '*')//if outside the raidius makes these tiles black
                         {
                             Console.ForegroundColor = ConsoleColor.Black;
                         }
